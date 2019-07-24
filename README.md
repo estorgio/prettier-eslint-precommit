@@ -35,7 +35,7 @@
     "bracketSpacing": true,
     "jsxBracketSameLine": true,
     "arrowParens": "avoid",
-    "endOfLine": "auto"
+    "endOfLine": "lf"
   }
   ```
 - Open `package.json` file and add the following sections:
@@ -95,3 +95,31 @@
     console.log('test');
   }
   ```
+
+## Visual Studio Code integration
+
+Aside from performing formatting and linting on commit, you can also install extensions on Visual Studio Code and perform these operations on every file save.
+
+- Install [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions for Visual Studio Code.
+- Open `settings.json` file and add these settings for Visual Studio Code:
+  ```json
+  {
+    "editor.formatOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "prettier.eslintIntegration": true,
+    "prettier.tslintIntegration": true,
+    "prettier.printWidth": 80,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.quoteProps": "as-needed",
+    "prettier.jsxSingleQuote": false,
+    "prettier.trailingComma": "all",
+    "prettier.bracketSpacing": true,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.arrowParens": "avoid",
+    "prettier.endOfLine": "lf"
+  }
+  ```
+- Save the file. VSCode should now work with ESLint and Prettier.
