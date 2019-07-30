@@ -38,6 +38,12 @@
     "endOfLine": "lf"
   }
   ```
+- Create `.prettierignore` and `.eslintignore` files and exclude third-party libraries.
+  ```
+  # Exclude third-party libraries
+  node_modules/
+  public/vendor/
+  ```
 - Open `package.json` file and add the following sections:
   ```json
   "husky": {
